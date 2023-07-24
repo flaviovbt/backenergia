@@ -1,0 +1,23 @@
+{
+  "name": "backenergia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flaviovbt/backenergia.git"
+  },
+  "author": "flavio teixeira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flaviovbt/backenergia/issues"
+  },
+  "homepage": "https://github.com/flaviovbt/backenergia#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "firebase-admin": "^11.10.1"
+  }
+}
