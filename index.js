@@ -2,12 +2,26 @@ const express = require('express')
 const firestoreService = require("./src/firestore_service");
 const app = express()
 
-app.get('/setuser', function (req, res) {
+app.get('/createuser', async (req, res) => {
+    let email = req.query.email;
+    let nome = req.query.nome;
+    let vitorias = 0;
+
+    if(! await firestoreService.createUser(email, nome, vitorias)){
+        res.status(200).send({mensagem :'O email já é utilizado por outra conta.',
+                            result: false});
+    }else {
+        res.status(200).send({mensagem :'Informações salvas no banco.',
+                            result: true});
+    }
+})
+
+app.get('/setuser', async (req, res) => { 
     let email = req.query.email;
     let nome = req.query.nome;
     let vitorias = req.query.vitorias ? req.query.vitorias : 0;
 
-    firestoreService.setUser(email, nome, vitorias);
+    await firestoreService.setUser(email, nome, vitorias);
     res.status(200).send('Informações salvas no banco.');
 })
 

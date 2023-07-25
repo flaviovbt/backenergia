@@ -29,6 +29,13 @@ async function setUser(email, nome, vitorias) {
     }
 }
 
+async function  createUser(email, nome, vitorias) {
+    if(await getUser(email) != null) return false;
+
+    setUser(email, nome, vitorias);
+    return true;
+}
+
 async function getUsers(){
     try {
         let users = [];
@@ -51,24 +58,23 @@ async function getUser(email){
     try {
         let user;
 
-        const snapshot = await colRef.get();
-        snapshot.forEach((doc) => {
-            if(doc.id == email){
-                user = doc.data();
-            }
-        });
+        let userRef = await db.doc('/users/' + email);
+
+        const userSnapshot = await userRef.get();
+        user = userSnapshot.data();
 
         console.log('Dados recuperados com sucesso do Firestore!');
 
         return user;
     } catch (error) {
         console.error('Erro ao recuperar os dados:', error);
-        return error;
+        return null;
     }
 }
 
 module.exports = {
     setUser,
     getUsers,
-    getUser
+    getUser,
+    createUser
 };  
