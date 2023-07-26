@@ -32,7 +32,7 @@ async function setUser(email, nome, vitorias) {
 async function  createUser(email, nome, vitorias) {
     if(await getUser(email) != null) return false;
 
-    setUser(email, nome, vitorias);
+    await setUser(email, nome, vitorias);
     return true;
 }
 

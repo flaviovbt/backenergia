@@ -1,6 +1,9 @@
 const express = require('express')
 const firestoreService = require("./src/firestore_service");
+const cors = require('cors');
 const app = express()
+
+app.use(cors());
 
 app.get('/createuser', async (req, res) => {
     let email = req.query.email;
