@@ -5,7 +5,7 @@ const app = express()
 
 app.use(cors());
 
-app.get('/createuser', async (req, res) => {
+app.post('/createuser', async (req, res) => {
     let email = req.query.email;
     let nome = req.query.nome;
     let vitorias = 0;
@@ -19,7 +19,7 @@ app.get('/createuser', async (req, res) => {
     }
 })
 
-app.get('/setuser', async (req, res) => { 
+app.post('/setuser', async (req, res) => { 
     let email = req.query.email;
     let nome = req.query.nome;
     let vitorias = req.query.vitorias ? req.query.vitorias : 0;
@@ -28,12 +28,12 @@ app.get('/setuser', async (req, res) => {
     res.status(200).send('Informações salvas no banco.');
 })
 
-app.get('/getusers', async (req, res) => {
+app.post('/getusers', async (req, res) => {
     let users = await firestoreService.getUsers();
     res.status(200).send(users);
 })
 
-app.get('/getuser', async (req, res) => {
+app.post('/getuser', async (req, res) => {
     let email = req.query.email;
     let users = await firestoreService.getUser(email);
     res.status(200).send(users);
