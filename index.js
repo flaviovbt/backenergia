@@ -1,11 +1,12 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const firestoreService = require("./src/firestore_service");
 const cors = require('cors');
 const app = express()
 
-app.use(cors());
+app.use(cors(), bodyParser.json());
 
-app.post('/createuser', async (req, res) => {
+app.post('/user/create', async (req, res) => {
     let email = req.query.email;
     let nome = req.query.nome;
     let vitorias = 0;
@@ -19,7 +20,7 @@ app.post('/createuser', async (req, res) => {
     }
 })
 
-app.post('/setuser', async (req, res) => { 
+app.post('/user/update', async (req, res) => { 
     let email = req.query.email;
     let nome = req.query.nome;
     let vitorias = req.query.vitorias ? req.query.vitorias : 0;
@@ -28,14 +29,27 @@ app.post('/setuser', async (req, res) => {
     res.status(200).send('Informações salvas no banco.');
 })
 
-app.post('/getusers', async (req, res) => {
+app.get('/user/getAll', async (req, res) => {
     let users = await firestoreService.getUsers();
     res.status(200).send(users);
 })
 
-app.post('/getuser', async (req, res) => {
+app.post('/user/get', async (req, res) => {
     let email = req.query.email;
     let users = await firestoreService.getUser(email);
+    res.status(200).send(users);
+})
+
+app.post('/pergunta/create', async (req, res) => {
+    const jsonData = req.body;
+
+    await firestoreService.createPergunta(jsonData);
+
+    res.json({ message: 'Requisição POST recebida com sucesso', data: jsonData});
+})
+
+app.get('/pergunta/getRandom', async (req, res) => {
+    let users = await firestoreService.getPerguntasRandom();
     res.status(200).send(users);
 })
 
