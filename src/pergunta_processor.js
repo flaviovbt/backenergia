@@ -20,8 +20,6 @@ async function selecionarAleatoriamente(array) {
 
     await shuffleArray(perguntasFiltradas);
 
-    console.log(perguntasFiltradas);
-
     return perguntasFiltradas;
 }
 

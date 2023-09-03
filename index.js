@@ -45,12 +45,20 @@ app.post('/pergunta/create', async (req, res) => {
 
     await firestoreService.createPergunta(jsonData);
 
-    res.json({ message: 'Requisição POST recebida com sucesso', data: jsonData});
+    res.status(200).send(jsonData);
 })
 
 app.get('/pergunta/getRandom', async (req, res) => {
     let users = await firestoreService.getPerguntasRandom();
     res.status(200).send(users);
+})
+
+app.post('/partida/create', async (req, res) => {
+    const jsonData = req.body;
+
+    await firestoreService.createPartida(jsonData);
+
+    res.status(200).send(jsonData);
 })
 
 app.listen(3000)

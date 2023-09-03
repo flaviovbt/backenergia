@@ -10,9 +10,11 @@ initializeApp({
 
 const db = getFirestore();
 
-const colRef = db.collection('users');
+const userRef = db.collection('users');
 
 const perguntasRef = db.collection('perguntas');
+
+const partidasRef = db.collection('partidas');
 
 async function setUser(email, nome, vitorias) {
     try {
@@ -23,7 +25,7 @@ async function setUser(email, nome, vitorias) {
             vitorias: vitorias
         };
 
-        const create = colRef.doc(email);
+        const create = userRef.doc(email);
 
         await create.set(userData);
         console.log('Dados salvos com sucesso no Firestore!');
@@ -43,7 +45,7 @@ async function getUsers() {
     try {
         let users = [];
 
-        const snapshot = await colRef.get();
+        const snapshot = await userRef.get();
         snapshot.forEach((doc) => {
             users.push(doc.data());
         });
@@ -61,7 +63,7 @@ async function getUser(email) {
     try {
         let user;
 
-        let userRef = await db.doc('/users/' + email);
+        let userRef = db.doc('/users/' + email);
 
         const userSnapshot = await userRef.get();
         user = userSnapshot.data();
@@ -80,8 +82,8 @@ async function createPergunta(jsonArray) {
         let create;
 
         await jsonArray.forEach(pergunta => {
-          create = perguntasRef.doc();
-          create.set(pergunta);
+            create = perguntasRef.doc();
+            create.set(pergunta);
         });
 
         console.log('Dados salvos com sucesso no Firestore!');
@@ -91,34 +93,46 @@ async function createPergunta(jsonArray) {
 }
 
 async function getPerguntas() {
-  try {
-      let perguntas = [];
+    try {
+        let perguntas = [];
 
-      const snapshot = await perguntasRef.get();
-      snapshot.forEach((doc) => {
-          perguntas.push(doc.data());
-      });
+        const snapshot = await perguntasRef.get();
+        snapshot.forEach((doc) => {
+            perguntas.push(doc.data());
+        });
 
-      console.log('Dados recuperados com sucesso do Firestore!');
+        console.log('Dados recuperados com sucesso do Firestore!');
 
-      return perguntas;
-  } catch (error) {
-      console.error('Erro ao recuperar os dados:', error);
-      return error;
-  }
+        return perguntas;
+    } catch (error) {
+        console.error('Erro ao recuperar os dados:', error);
+        return error;
+    }
 }
 
 async function getPerguntasRandom() {
-  try {
-      let perguntas = await getPerguntas();
+    try {
+        let perguntas = await getPerguntas();
 
-      const perguntasFiltradas = await perguntaProcessor.selecionarAleatoriamente(perguntas);
+        const perguntasFiltradas = await perguntaProcessor.selecionarAleatoriamente(perguntas);
 
-      return perguntasFiltradas;
-  } catch (error) {
-      console.error('Erro ao recuperar os dados:', error);
-      return error;
-  }
+        return perguntasFiltradas;
+    } catch (error) {
+        console.error('Erro ao recuperar os dados:', error);
+        return error;
+    }
+}
+
+async function createPartida(json) {
+    try {
+
+        let create = partidasRef.doc();
+        await create.set(json);
+
+        console.log('Dados salvos com sucesso no Firestore!');
+    } catch (error) {
+        console.error('Erro ao salvar os dados:', error);
+    }
 }
 
 module.exports = {
@@ -128,5 +142,6 @@ module.exports = {
     createUser,
     createPergunta,
     getPerguntas,
-    getPerguntasRandom
+    getPerguntasRandom,
+    createPartida
 };  
