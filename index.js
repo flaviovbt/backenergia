@@ -9,9 +9,8 @@ app.use(cors(), bodyParser.json());
 app.post('/user/create', async (req, res) => {
     let email = req.query.email;
     let nome = req.query.nome;
-    let vitorias = 0;
 
-    if(! await firestoreService.createUser(email, nome, vitorias)){
+    if(! await firestoreService.createUser(email, nome)){
         res.status(200).send({mensagem :'O email já é utilizado por outra conta.',
                             result: false});
     }else {
@@ -22,10 +21,9 @@ app.post('/user/create', async (req, res) => {
 
 app.post('/user/update', async (req, res) => { 
     let email = req.query.email;
-    let nome = req.query.nome;
-    let vitorias = req.query.vitorias ? req.query.vitorias : 0;
+    const jsonData = req.body;
 
-    await firestoreService.setUser(email, nome, vitorias);
+    await firestoreService.updateUser(email, jsonData);
     res.status(200).send('Informações salvas no banco.');
 })
 
@@ -55,10 +53,16 @@ app.get('/pergunta/getRandom', async (req, res) => {
 
 app.post('/partida/create', async (req, res) => {
     const jsonData = req.body;
+    let email = req.query.email;
 
-    await firestoreService.createPartida(jsonData);
+    await firestoreService.createPartida(jsonData, email);
 
     res.status(200).send(jsonData);
+})
+
+app.get('/partida/getRanking', async (req, res) => {
+    let partidas = await firestoreService.getRanking();
+    res.status(200).send(partidas);
 })
 
 app.listen(3000)

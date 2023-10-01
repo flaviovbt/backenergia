@@ -16,29 +16,63 @@ const perguntasRef = db.collection('perguntas');
 
 const partidasRef = db.collection('partidas');
 
-async function setUser(email, nome, vitorias) {
+async function setUser(email, nome) {
     try {
         // Define os dados que serão salvos no documento
         const userData = {
             email: email,
-            nome: nome,
-            vitorias: vitorias
+            nome: nome
         };
 
         const create = userRef.doc(email);
 
         await create.set(userData);
-        console.log('Dados salvos com sucesso no Firestore!');
+        console.log('Dados do usuario salvos com sucesso no Firestore!');
     } catch (error) {
         console.error('Erro ao salvar os dados:', error);
     }
 }
 
-async function createUser(email, nome, vitorias) {
+async function createUser(email, nome) {
     if (await getUser(email) != null) return false;
 
-    await setUser(email, nome, vitorias);
+    await setUser(email, nome);
+
+    await createColectionPartidas(email, nome);
+
     return true;
+}
+
+async function createColectionPartidas(email, nome){
+    try {
+
+        let create = partidasRef.doc(email);
+
+        let partidas = {
+            numPartidas : 0,
+            infos: [], 
+            maiorPontuacao: 0,
+            maiorPontuacaoIndex: null,
+            nome: nome
+        };
+
+       await create.set(partidas);
+
+        console.log('Dados da partida salvos com sucesso no Firestore!');
+    } catch (error) {
+        console.error('Erro ao salvar os dados:', error);
+    }
+}
+
+async function updateUser(email, jsonData) {
+    try {
+        const update = userRef.doc(email);
+
+        await update.set(jsonData);
+        console.log('Dados do usuario salvos com sucesso no Firestore!');
+    } catch (error) {
+        console.error('Erro ao salvar os dados:', error);
+    }
 }
 
 async function getUsers() {
@@ -50,7 +84,7 @@ async function getUsers() {
             users.push(doc.data());
         });
 
-        console.log('Dados recuperados com sucesso do Firestore!');
+        console.log('Dados dos usuarios recuperados com sucesso do Firestore!');
 
         return users;
     } catch (error) {
@@ -68,7 +102,7 @@ async function getUser(email) {
         const userSnapshot = await userRef.get();
         user = userSnapshot.data();
 
-        console.log('Dados recuperados com sucesso do Firestore!');
+        console.log('Dados do usuario recuperados com sucesso do Firestore!');
 
         return user;
     } catch (error) {
@@ -101,7 +135,7 @@ async function getPerguntas() {
             perguntas.push(doc.data());
         });
 
-        console.log('Dados recuperados com sucesso do Firestore!');
+        console.log('Dados das perguntas recuperados com sucesso do Firestore!');
 
         return perguntas;
     } catch (error) {
@@ -123,25 +157,86 @@ async function getPerguntasRandom() {
     }
 }
 
-async function createPartida(json) {
+async function createPartida(json, email) {
     try {
+        let partida = await getPartidas(email);
 
-        let create = partidasRef.doc();
-        await create.set(json);
+        partida.numPartidas++;
+        partida.infos.push(json);
 
-        console.log('Dados salvos com sucesso no Firestore!');
+        if(json.pontuacao > partida.maiorPontuacao) {
+            partida.maiorPontuacao = json.pontuacao;
+            partida.maiorPontuacaoIndex = (partida.infos.length - 1);
+        }
+
+        let update = partidasRef.doc(email);
+        await update.set(partida);
+
+        console.log('Dados da partida salvos com sucesso no Firestore!');
     } catch (error) {
         console.error('Erro ao salvar os dados:', error);
     }
 }
 
+async function getPartidas(email) {
+    try {
+        let partida;
+
+        let partidaRef = db.doc('/partidas/' + email);
+
+        const pSnapshot = await partidaRef.get();
+        partida = pSnapshot.data();
+
+        console.log('Dados do usuario recuperados com sucesso do Firestore!');
+
+        return partida;
+    } catch (error) {
+        console.error('Erro ao recuperar os dados:', error);
+        return null;
+    }
+}
+
+async function getRanking() {
+    try {
+        let ranking = [];
+        let partida = {};
+
+        const snapshot = await partidasRef.get();
+        snapshot.forEach((doc) => {
+            partida = {};
+            let partidasUser = doc.data();
+
+            partida.maior = partidasUser.maiorPontuacao;
+            partida.nome = partidasUser.nome;
+
+            let partidaAux = partidasUser.infos[partidasUser.maiorPontuacaoIndex];
+
+            console.log(partidaAux);
+
+            partida.dificuldade =  partidaAux.dificuldade;
+
+            ranking.push(partida);
+        });
+
+        console.log(ranking);
+
+        console.log('Dados do ranking recuperados com sucesso do Firestore!');
+
+        return ranking;
+    } catch (error) {
+        console.error('Erro ao recuperar os dados:', error);
+        return error;
+    }
+}
+
 module.exports = {
-    setUser,
     getUsers,
     getUser,
     createUser,
     createPergunta,
     getPerguntas,
     getPerguntasRandom,
-    createPartida
+    createPartida,
+    updateUser, 
+    getRanking
 };  
