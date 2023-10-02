@@ -211,14 +211,18 @@ async function getRanking() {
 
             let partidaAux = partidasUser.infos[partidasUser.maiorPontuacaoIndex];
 
-            console.log(partidaAux);
-
             partida.dificuldade =  partidaAux.dificuldade;
 
             ranking.push(partida);
         });
 
-        console.log(ranking);
+        ranking.sort(function(a, b) {
+            return b.maior - a.maior;
+        });
+
+        for (let index = 0; index < ranking.length; index++) {
+            ranking[index].posicao = (index+1);
+        }
 
         console.log('Dados do ranking recuperados com sucesso do Firestore!');
 
