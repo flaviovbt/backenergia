@@ -43,20 +43,20 @@ async function createUser(email, nome) {
     return true;
 }
 
-async function createColectionPartidas(email, nome){
+async function createColectionPartidas(email, nome) {
     try {
 
         let create = partidasRef.doc(email);
 
         let partidas = {
-            numPartidas : 0,
-            infos: [], 
+            numPartidas: 0,
+            infos: [],
             maiorPontuacao: 0,
             maiorPontuacaoIndex: null,
             nome: nome
         };
 
-       await create.set(partidas);
+        await create.set(partidas);
 
         console.log('Dados da partida salvos com sucesso no Firestore!');
     } catch (error) {
@@ -164,7 +164,7 @@ async function createPartida(json, email) {
         partida.numPartidas++;
         partida.infos.push(json);
 
-        if(json.pontuacao > partida.maiorPontuacao) {
+        if (json.pontuacao > partida.maiorPontuacao) {
             partida.maiorPontuacao = json.pontuacao;
             partida.maiorPontuacaoIndex = (partida.infos.length - 1);
         }
@@ -203,25 +203,27 @@ async function getRanking() {
 
         const snapshot = await partidasRef.get();
         snapshot.forEach((doc) => {
-            partida = {};
             let partidasUser = doc.data();
 
-            partida.maior = partidasUser.maiorPontuacao;
-            partida.nome = partidasUser.nome;
+            if (partidasUser.infos.length > 0) {
+                partida = {};
+                partida.maior = partidasUser.maiorPontuacao;
+                partida.nome = partidasUser.nome;
 
-            let partidaAux = partidasUser.infos[partidasUser.maiorPontuacaoIndex];
+                let partidaAux = partidasUser.infos[partidasUser.maiorPontuacaoIndex];
 
-            partida.dificuldade =  partidaAux.dificuldade;
+                partida.dificuldade = partidaAux.dificuldade;
 
-            ranking.push(partida);
+                ranking.push(partida);
+            }
         });
 
-        ranking.sort(function(a, b) {
+        ranking.sort(function (a, b) {
             return b.maior - a.maior;
         });
 
         for (let index = 0; index < ranking.length; index++) {
-            ranking[index].posicao = (index+1);
+            ranking[index].posicao = (index + 1);
         }
 
         console.log('Dados do ranking recuperados com sucesso do Firestore!');
@@ -241,6 +243,6 @@ module.exports = {
     getPerguntas,
     getPerguntasRandom,
     createPartida,
-    updateUser, 
+    updateUser,
     getRanking
 };  
