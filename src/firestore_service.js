@@ -1,6 +1,6 @@
 const { initializeApp, cert } = require('firebase-admin/app');
-const { getFirestore, Timestamp, FieldValue, Filter, QuerySnapshot } = require('firebase-admin/firestore');
-const perguntaProcessor = require("./pergunta_processor");
+const { getFirestore } = require('firebase-admin/firestore');
+const perguntaProcessor = require("./Pergunta_processor");
 
 const serviceAccount = require('.././security/serviceAccountKey.json');
 
@@ -66,10 +66,10 @@ async function createColectionPartidas(email, nome) {
 
 async function updateUser(email, jsonData) {
     try {
-        const update = userRef.doc(email);
+        let update = userRef.doc(email);
 
         await update.set(jsonData);
-        console.log('Dados do usuario salvos com sucesso no Firestore!');
+        console.log('Dados do usuario salvos com sucesso no Firestore!', jsonData);
     } catch (error) {
         console.error('Erro ao salvar os dados:', error);
     }
@@ -207,6 +207,7 @@ async function getRanking() {
 
             if (partidasUser.infos.length > 0) {
                 partida = {};
+
                 partida.maior = partidasUser.maiorPontuacao;
                 partida.nome = partidasUser.nome;
 
