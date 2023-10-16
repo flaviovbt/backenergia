@@ -1,0 +1,327 @@
+[
+    {
+      "texto": "Marque a alternativa que contém somente países nos quais o território da floresta amazônica se estende:",
+      "resposta": "Bolívia, Guiana Francesa, Equador e Venezuela.",
+      "alternativas": [
+        "Bolívia, Guiana Francesa, Equador e Venezuela.",
+        "Brasil, Venezuela, Peru e Paraguai.",
+        "Brasil, Guiana, Bolívia e Chile.",
+        "Venezuela, Panamá, Equador e Bolívia.",
+        "Chile, Argentina, Peru e Equador."
+      ],
+      "fonte": "https://ambientes.ambientebrasil.com.br/amazonia/floresta_amazonica/floresta_amazonica_-_localizacao.html",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "Qual o país que mais emite carbono no mundo ?",
+      "resposta": "China",
+      "alternativas": [
+        "China",
+        "Estados Unidos",
+        "Rússia",
+        "Índia",
+        "Brasil"
+      ],
+      "fonte": "https://www.wribrasil.org.br/noticias/trajetoria-dos-10-maiores-emissores-de-carbono-desde-o-acordo-de-paris-em-graficos",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "O que são as Queimadas ?",
+      "resposta": "É uma antiga prática que utiliza o fogo de forma controlada para viabilizar a agricultura ou renovar pastagens.",
+      "alternativas": [
+        "É uma antiga prática que utiliza o fogo de forma controlada para viabilizar a agricultura ou renovar pastagens.",
+        "É o fogo sem controle que incide sobre qualquer forma de vegetação.",
+        "São as queimaduras na pele causadas pelo sol.",
+        "É o ato de fazer uma grande fogueira.",
+        "É quando os raios solares iniciam um incêndio na floresta."
+      ],
+      "fonte": "https://ambientes.ambientebrasil.com.br/florestal/artigos/queimadas_incendios_florestais.html",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "O que são os Incêndios Florestais ?",
+      "resposta": "É o fogo sem controle que incide sobre qualquer forma de vegetação, podendo tanto ser provocado pelo homem ou por uma causa natural.",
+      "alternativas": [
+        "É o fogo sem controle que incide sobre qualquer forma de vegetação, podendo tanto ser provocado pelo homem ou por uma causa natural.",
+        "É uma antiga prática que utiliza o fogo de forma controlada para viabilizar a agricultura ou renovar pastagens.",
+        "É quando as folhas das árvores ressecam.",
+        "É o ato de fazer uma grande fogueira.",
+        "É o ato de queimar uma árvore."
+      ],
+      "fonte": "https://ambientes.ambientebrasil.com.br/florestal/artigos/queimadas_incendios_florestais.html",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "Marque a alternativa que possui somente causas de Incêndios Florestais:",
+      "resposta": "Raios, Fogos campestres e Queimadas ilegais.",
+      "alternativas": [
+        "Raios, Fogos campestres e Queimadas ilegais.",
+        "Queimadas Ilegais; Descarte incorreto de lixo na natureza; Reações fermentativas exotérmicas;",
+        "Fogos campestres; Raios Solares; Tempestades;",
+        "Bitucas de Cigarro; Queimadas Ilegais; Animais em decomposição;",
+        "Bitucas de Cigarro; Raios; Terremotos;"
+      ],
+      "fonte": "https://brasilescola.uol.com.br/geografia/incendios-florestais.htm#Principais+causas+dos+inc%C3%AAndios+florestais+",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "Marque a alternativa que possui somente causas do desmatamento na Amazônia:",
+      "resposta": "Rodovia Transamazônica; Pecuária extensiva; Produção Agrícola;",
+      "alternativas": [
+        "Rodovia Transamazônica; Pecuária extensiva; Produção Agrícola;",
+        "Mineração; Pecuária extensiva; Período de seca;",
+        "Rodovia Transamazônica; Produção Agrícola; Período de cheia;",
+        "Mineração; Rodovia Transamazônica; Grande Biodiversidade;",
+        "Produção Agrícola; Turismo; Mineração;"
+      ],
+      "fonte": "https://brasilescola.uol.com.br/brasil/desmatamento-da-amazonia.htm#Causas+do+desmatamento+na+Amaz%C3%B4nia",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "Marque a alternativa que possui somente causas para o aquecimento global:",
+      "resposta": "Poluição; Incêndios Florestais; Desmatamento;",
+      "alternativas": [
+        "Poluição; Incêndios Florestais; Desmatamento;",
+        "Piscinas; Incêndios Florestais; Desmatamento;",
+        "Poluição; Veículos à Combustão; Energia Sustentável;",
+        "Desmatamento; Produtos derivados do petróleo; Caminhadas;",
+        "Energia não renovável; Ler livros; Poluição;"
+      ],
+      "fonte": "https://brasilescola.uol.com.br/geografia/aquecimento-global.htm",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "Marque a alternativa que possui somente consequências negativas do efeito estufa:",
+      "resposta": "Aumento do nível do mar; Elevação das temperaturas; Secas intensas;",
+      "alternativas": [
+        "Aumento do nível do mar; Elevação das temperaturas; Secas intensas;",
+        "Aumento do nível do mar; Aumento das temperaturas; Terremotos;",
+        "Elevação das temperaturas; Terremotos; Incêndios Florestais;",
+        "Secas intensas; Inundações; Globalização;",
+        "Elevação das temperaturas; Incêndios Florestais; Maior consumo de salada;"
+      ],
+      "fonte": "https://www.portaldaindustria.com.br/industria-de-a-z/efeito-estufa/#:~:text=Globalmente%2C%20os%20maiores%20emissores%20de,res%C3%ADduos%20org%C3%A2nicos%20e%20atividades%20industriais.",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "Marque a alternativa que possui somente fontes de gases de efeito estufa:",
+      "resposta": "Fermentação entérica; Processos industriais; Transporte;",
+      "alternativas": [
+        "Fermentação entérica; Processos industriais; Transporte;",
+        "Desmatamento; Transporte; Ciclo da Água;",
+        "Fermentação entérica; Desmatamento; Andar à cavalo;",
+        "Transporte; Ciclo do Carbono; Comer Salada;",
+        "Fermentação entérica; Processos industriais; Tempestade;"
+      ],
+      "fonte": "https://blog.waycarbon.com/2017/02/5-fontes-de-gases-de-efeito-estufa/",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "Marque a alternativa que possui somente energias sustentáveis :",
+      "resposta": "Energia Ondomotriz, Energia Hidroelétrica, Energia Biomassa.",
+      "alternativas": [
+        "Energia Ondomotriz, Energia Hidroelétrica, Energia Biomassa.",
+        "Energia Ondomotriz, Energia Nuclear, Petróleo.",
+        "Carvão mineral, Energia Eólica, Energia Hidroelétrica.",
+        "Energia Solar Fotovoltaica, Energia Nuclear, Energia Maremotriz.",
+        "Energia Nuclear, Carvão mineral, Petróleo."
+      ],
+      "fonte": "https://fia.com.br/blog/energia-sustentavel/",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "Marque a alternativa que possui somente energias sustentáveis :",
+      "resposta": "Energia Ondomotriz, Energia Hidroelétrica, Energia Biomassa.",
+      "alternativas": [
+        "Energia Ondomotriz, Energia Hidroelétrica, Energia Biomassa.",
+        "Energia Ondomotriz, Energia Nuclear, Petróleo.",
+        "Carvão mineral, Energia Eólica, Energia Hidroelétrica.",
+        "Energia Solar Fotovoltaica, Energia Nuclear, Energia Maremotriz.",
+        "Energia Nuclear, Carvão mineral, Petróleo."
+      ],
+      "fonte": "https://fia.com.br/blog/energia-sustentavel/",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "Como é obtida a Energia Ondomotriz ?",
+      "resposta": "É gerada pelo movimento das ondas.",
+      "alternativas": [
+        "É gerada pelo movimento das ondas.",
+        " É gerada através do fluxo de água.",
+        "A partir do movimento das massas de ar (vento).",
+        "Através da captação com painéis solares.",
+        "A partir de processos como a combustão de material orgânico produzido e acumulado."
+      ],
+      "fonte": "https://fia.com.br/blog/energia-sustentavel/",
+      "dificuldade": "Difícil"
+    },
+    {
+      "texto": "Como é obtida a Energia Eólica ?",
+      "resposta": "A partir do movimento das massas de ar (vento).",
+      "alternativas": [
+        "A partir do movimento das massas de ar (vento).",
+        "Através da captação com painéis solares.",
+        "Ela é proveniente do calor do interior do planeta.",
+        "A partir de processos como a combustão de material orgânico produzido e acumulado.",
+        "É gerada através do fluxo de água."
+      ],
+      "fonte": "https://fia.com.br/blog/energia-sustentavel/",
+      "dificuldade": "Difícil"
+    },
+    {
+        "texto": "Como uma fonte energética precisa obter energia para ser considerada sustentável ou renovável ?",
+        "resposta": "Precisa obter energia através de um recurso inesgotável.",
+        "alternativas": [
+            "Precisa obter energia através de um recurso inesgotável.",
+            "Deve ser alimentada por combustíveis fósseis de forma eficiente.",
+            "Deve depender exclusivamente de fontes de energia altamente poluentes.",
+            "Pode utilizar recursos naturais apenas temporariamente.",
+            "Pode usar recursos energéticos de maneira irresponsável."
+        ],
+        "fonte": "https://fia.com.br/blog/energia-sustentavel/",
+        "dificuldade": "Fácil"
+    },
+    {
+        "texto": "Como é obtida a Energia Solar Fotovoltaica ?",
+        "resposta": "Através da captação com painéis solares.",
+        "alternativas": [
+            "Através da captação com painéis solares.",
+            "Ela é proveniente do calor do interior do planeta.",
+            "É gerada por meio do movimento de marés.",
+            "É gerada pelo movimento das ondas.",
+            "A partir do movimento das massas de ar (vento)."
+        ],
+        "fonte": "https://fia.com.br/blog/energia-sustentavel/",
+        "dificuldade": "Fácil"
+    },
+    {
+        "texto": "Como é obtida a Energia Hidroelétrica ?",
+        "resposta": "É gerada através do fluxo de água.",
+        "alternativas": [
+            "É gerada através do fluxo de água.",
+            "Ela é proveniente do calor do interior do planeta.",
+            "É gerada por meio do movimento de marés.",
+            "É gerada pelo movimento das ondas.",
+            "A partir de processos como a combustão de material orgânico produzido e acumulado."
+        ],
+        "fonte": "https://fia.com.br/blog/energia-sustentavel/",
+        "dificuldade": "Fácil"
+    },
+    {
+        "texto": "Como é obtida a Energia Geotérmica ?",
+        "resposta": "Ela é proveniente do calor do interior do planeta.",
+        "alternativas": [
+            "Ela é proveniente do calor do interior do planeta.",
+            "É gerada por meio do movimento de marés.",
+            "É gerada através do fluxo de água.",
+            "A partir do movimento das massas de ar (vento).",
+            "É gerada pelo movimento das ondas."
+        ],
+        "fonte": "https://fia.com.br/blog/energia-sustentavel/",
+        "dificuldade": "Fácil"
+    },
+    {
+        "texto": "Como é obtida a Energia Maremotriz ?",
+        "resposta": "É gerada por meio do movimento de marés.",
+        "alternativas": [
+            "É gerada por meio do movimento de marés.",
+            "A partir do movimento das massas de ar (vento).",
+            "É gerada através do fluxo de água.",
+            "A partir de processos como a combustão de material orgânico produzido e acumulado.",
+            "É gerada pelo movimento das ondas."
+        ],
+        "fonte": "https://fia.com.br/blog/energia-sustentavel/",
+        "dificuldade": "Fácil"
+    },
+    {
+        "texto": "Como é obtida a Energia Biomassa ?",
+        "resposta": "A partir de processos como a combustão de material orgânico produzido e acumulado.",
+        "alternativas": [
+            "A partir de processos como a combustão de material orgânico produzido e acumulado.",
+            "Ela é proveniente do calor do interior do planeta.",
+            "É gerada por meio do movimento de marés.",
+            "É gerada pelo movimento das ondas.",
+            "É gerada através do fluxo de água."
+        ],
+        "fonte": "https://fia.com.br/blog/energia-sustentavel/",
+        "dificuldade": "Fácil"
+    },
+    {
+        "texto": "Escolha a alternativa que possui somente impactos ambientais da energia não renovável :",
+        "resposta": "Poluição do ar; Aquecimento global; Desmatamento.",
+        "alternativas": [
+            "Poluição do ar; Aquecimento global; Desmatamento.",
+            "Erosão do solo; Extinção de espécies; Poluição do ar.",
+            "Biodiversidade; Aquecimento global; Desmatamento.",
+            "Poluição de água; Ciclo de carbono; Chuva ácida.",
+            "Extinção dos recursos hídricos; Poluição do ar; Geração de resíduos orgânicos."
+        ],
+        "fonte": "https://brxsolar.com/impactos-da-energia-nao-renovavel/",
+        "dificuldade": "Fácil"
+    },
+    {
+        "texto": "Escolha a alternativa que possui somente fontes de energia não renováveis :",
+        "resposta": "Gás Natural; Carvão Mineral; Plutônio.",
+        "alternativas": [
+            "Gás Natural; Carvão Mineral; Plutônio.",
+            "Biocombustíveis; Carvão Mineral; Urânio.",
+            "Petróleo; Biocombustíveis; Carvão Mineral.",
+            "Carvão Mineral; Marés; Urânio.",
+            "Biocombustíveis; Fluxo da Água; Petróleo."
+        ],
+        "fonte": "https://brasilescola.uol.com.br/geografia/fontes-nao-renovaveis-energia.htm",
+        "dificuldade": "Fácil"
+    },
+    {
+        "texto": "Marque a alternativa que possui somente gases do efeito estufa:",
+        "resposta": "Dióxido de carbono (CO2), Metano (CH4) e Ozônio (O3).",
+        "alternativas": [
+            "Dióxido de carbono (CO2), Metano (CH4) e Ozônio (O3).",
+            "Dióxido de carbono (CO2), Metano (CH4) e Oxigênio (O2).",
+            "Hidrogênio (H2), Metano (CH4) e Oxigênio (O2).",
+            "Dióxido de carbono (CO2), Hidrogênio (H2) e Argônio (Ar).",
+            "Hélio(he), Oxigênio(O2) e Dióxido de carbono (CO2)."
+        ],
+        "fonte": "https://brasilescola.uol.com.br/quimica/gases-efeito-estufa.htm",
+        "dificuldade": "Fácil"
+    },
+    {
+        "texto": "O que é o aquecimento global ?",
+        "resposta": "É um fenômeno causado pela emissões de gases que intensificam o efeito estufa e que eleva a temperatura do planeta.",
+        "alternativas": [
+            "É um fenômeno causado pela emissões de gases que intensificam o efeito estufa e que eleva a temperatura do planeta.",
+            "É causado por alienígenas que aumentam a temperatura da Terra como parte de um experimento.",
+            "É resultado do excesso de refrigerantes que as pessoas consomem.",
+            "É causado pelo aumento das chamas de velas em aniversários.",
+            "É um fenômeno causado pela emissões de gases que intensificam o efeito pantufa e que abaixa a temperatura do planeta."
+        ],
+        "fonte": "https://umsoplaneta.globo.com/clima/noticia/2021/04/04/bloco-1-o-que-e-o-aquecimento-global.ghtml",
+        "dificuldade": "Fácil"
+    },
+    {
+        "texto": "Marque a alternativa que possui somente ações que reduzem o aumento dos gases de efeito estufa:",
+        "resposta": "Reduzir o consumo de combustíveis fósseis; Adotar energias renováveis; Reduzir, reutilizar e reciclar resíduos;",
+        "alternativas": [
+            "Reduzir o consumo de combustíveis fósseis; Adotar energias renováveis; Reduzir, reutilizar e reciclar resíduos;",
+            "Aumentar o consumo de combustíveis fósseis; Adotar energias não renováveis; Reduzir, reutilizar e reciclar resíduos;",
+            "Plantar árvores e conservar florestas; Ler Livros; Praticar musculação;",
+            "Aumentar a eficiência energética; Apoiar políticas ambientais; Comer salada;",
+            "Reduzir, reutilizar e reciclar resíduos; Entrar em contato com a Nasa; Adotar energias renováveis;"
+        ],
+        "fonte": "https://www.portaldaindustria.com.br/industria-de-a-z/efeito-estufa/#:~:text=Globalmente%2C%20os%20maiores%20emissores%20de,res%C3%ADduos%20org%C3%A2nicos%20e%20atividades%20industriais.",
+        "dificuldade": "Fácil"
+    },
+    {
+        "texto": "Por quais estados passa o Arco de Desmatamento ?",
+        "resposta": "Maranhão, Pará, Mato Grosso, Rondônia e Acre.",
+        "alternativas": [
+            "Maranhão, Pará, Mato Grosso, Rondônia e Acre.",
+            "Amazonas, Pará, Mato Grosso, Rondônia e Acre.",
+            "Amazonas, Roraima, Pará e Acre.",
+            "Roraima, Pará, Mato Grosso, Rondônia e Amazonas.",
+            "Maranhão, Amazonas, Roraima, Rondônia e Acre."
+        ],
+        "fonte": "https://acervo.socioambiental.org/sites/default/files/documents/prov0115.pdf",
+        "dificuldade": "Fácil"
+    }
+  ]

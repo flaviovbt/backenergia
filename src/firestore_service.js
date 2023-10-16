@@ -114,11 +114,38 @@ async function getUser(email) {
 async function createPergunta(jsonArray) {
     try {
         let create;
+        let facil = {};
+        let dificil = {};
+        dificil.perguntas = [];
+        facil.perguntas = [];
+
+        let perguntasFacilBanco = await getPerguntas("Fácil");
+        let perguntasDificilBanco = await getPerguntas("Difícil");
+        if(perguntasFacilBanco.perguntas.length > 0){
+            facil = perguntasFacilBanco;
+        }
+        if(perguntasDificilBanco.perguntas.length > 0){
+            dificil = perguntasDificilBanco;
+        }
 
         await jsonArray.forEach(pergunta => {
-            create = perguntasRef.doc();
-            create.set(pergunta);
+            if(pergunta.dificuldade == "Fácil"){
+                facil.perguntas.push(pergunta);
+            }
+            if(pergunta.dificuldade == "Difícil"){
+                dificil.perguntas.push(pergunta);
+            }
         });
+
+        if(dificil.perguntas.length > 0){
+            create = perguntasRef.doc("Difícil");
+            create.set(dificil);
+        }
+        
+        if(facil.perguntas.length > 0){
+            create = perguntasRef.doc("Fácil");
+            create.set(facil);
+        }
 
         console.log('Dados salvos com sucesso no Firestore!');
     } catch (error) {
@@ -126,14 +153,14 @@ async function createPergunta(jsonArray) {
     }
 }
 
-async function getPerguntas() {
+async function getPerguntas(dificuldade) {
     try {
-        let perguntas = [];
+        let perguntas;
 
-        const snapshot = await perguntasRef.get();
-        snapshot.forEach((doc) => {
-            perguntas.push(doc.data());
-        });
+        let perguntaRef = db.doc('/perguntas/' + dificuldade);
+        const pSnapshot = await perguntaRef.get();
+
+        perguntas = pSnapshot.data();
 
         console.log('Dados das perguntas recuperados com sucesso do Firestore!');
 
@@ -144,11 +171,11 @@ async function getPerguntas() {
     }
 }
 
-async function getPerguntasRandom() {
+async function getPerguntasRandom(dificuldade) {
     try {
-        let perguntas = await getPerguntas();
+        let data = await getPerguntas(dificuldade);
 
-        const perguntasFiltradas = await perguntaProcessor.selecionarAleatoriamente(perguntas);
+        const perguntasFiltradas = await perguntaProcessor.selecionarAleatoriamente(data.perguntas);
 
         return perguntasFiltradas;
     } catch (error) {

@@ -83,7 +83,12 @@ app.get('/pergunta/getRandom', async (req, res) => {
         return res.status(403).send();
     }
 
-    let users = await firestoreService.getPerguntasRandom();
+    const dificuldade = req.query.dificuldade;
+    if(dificuldade == null){
+        return res.status(500).send();
+    }
+
+    let users = await firestoreService.getPerguntasRandom(dificuldade);
     res.status(200).send(users);
 })
 
