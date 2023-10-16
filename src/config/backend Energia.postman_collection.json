@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "1a25bd9a-e45d-43cd-b853-18c279d13552",
+		"name": "backend Energia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21552923"
+	},
+	"item": [
+		{
+			"name": "update user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nao@nao.com\",\r\n    \"nome\": \"nicolas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/update?email=nao@nao.com&token=QraXnnqdaGICtPQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"update"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "nao@nao.com"
+						},
+						{
+							"key": "token",
+							"value": "QraXnnqdaGICtPQ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"accept": true,
+					"user-agent": true,
+					"connection": true,
+					"accept-encoding": true,
+					"content-length": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/create?nome=flavio&email=flavio@yahoo.com&token=QraXnnqdaGICtPQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"create"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "flavio"
+						},
+						{
+							"key": "email",
+							"value": "flavio@yahoo.com"
+						},
+						{
+							"key": "token",
+							"value": "QraXnnqdaGICtPQ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/getAll?token=QraXnnqdaGICtPQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"getAll"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "QraXnnqdaGICtPQ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pergunta getRandom",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pergunta/getRandom?token=QraXnnqdaGICtPQ&dificuldade=Fácil",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pergunta",
+						"getRandom"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "QraXnnqdaGICtPQ"
+						},
+						{
+							"key": "dificuldade",
+							"value": "Fácil"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partida getRanking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/partida/getRanking?token=QraXnnqdaGICtPQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"partida",
+						"getRanking"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "QraXnnqdaGICtPQ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/get?email=nao@nao.com&token=QraXnnqdaGICtPQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"get"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "nao@nao.com"
+						},
+						{
+							"key": "token",
+							"value": "QraXnnqdaGICtPQ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pergunta create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"texto\": \"Marque a alternativa que contém somente países nos quais o território da floresta amazônica se estende:\",\r\n        \"resposta\": \"Bolívia, Guiana Francesa, Equador e Venezuela.\",\r\n        \"alternativas\": [\r\n            \"Bolívia, Guiana Francesa, Equador e Venezuela.\",\r\n            \"Brasil, Venezuela, Peru e Paraguai.\",\r\n            \"Brasil, Guiana, Bolívia e Chile.\",\r\n            \"Venezuela, Panamá, Equador e Bolívia.\",\r\n            \"Chile, Argentina, Peru e Equador.\"\r\n        ],\r\n        \"fonte\": \"https://ambientes.ambientebrasil.com.br/amazonia/floresta_amazonica/floresta_amazonica_-_localizacao.html\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"Qual o país que mais emite carbono no mundo ?\",\r\n        \"resposta\": \"China\",\r\n        \"alternativas\": [\r\n            \"China\",\r\n            \"Estados Unidos\",\r\n            \"Rússia\",\r\n            \"Índia\",\r\n            \"Brasil\"\r\n        ],\r\n        \"fonte\": \"https://www.wribrasil.org.br/noticias/trajetoria-dos-10-maiores-emissores-de-carbono-desde-o-acordo-de-paris-em-graficos\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"O que são as Queimadas ?\",\r\n        \"resposta\": \"É uma antiga prática que utiliza o fogo de forma controlada para viabilizar a agricultura ou renovar pastagens.\",\r\n        \"alternativas\": [\r\n            \"É uma antiga prática que utiliza o fogo de forma controlada para viabilizar a agricultura ou renovar pastagens.\",\r\n            \"É o fogo sem controle que incide sobre qualquer forma de vegetação.\",\r\n            \"São as queimaduras na pele causadas pelo sol.\",\r\n            \"É o ato de fazer uma grande fogueira.\",\r\n            \"É quando os raios solares iniciam um incêndio na floresta.\"\r\n        ],\r\n        \"fonte\": \"https://ambientes.ambientebrasil.com.br/florestal/artigos/queimadas_incendios_florestais.html\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"O que são os Incêndios Florestais ?\",\r\n        \"resposta\": \"É o fogo sem controle que incide sobre qualquer forma de vegetação, podendo tanto ser provocado pelo homem ou por uma causa natural.\",\r\n        \"alternativas\": [\r\n            \"É o fogo sem controle que incide sobre qualquer forma de vegetação, podendo tanto ser provocado pelo homem ou por uma causa natural.\",\r\n            \"É uma antiga prática que utiliza o fogo de forma controlada para viabilizar a agricultura ou renovar pastagens.\",\r\n            \"É quando as folhas das árvores ressecam.\",\r\n            \"É o ato de fazer uma grande fogueira.\",\r\n            \"É o ato de queimar uma árvore.\"\r\n        ],\r\n        \"fonte\": \"https://ambientes.ambientebrasil.com.br/florestal/artigos/queimadas_incendios_florestais.html\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"Marque a alternativa que possui somente causas de Incêndios Florestais:\",\r\n        \"resposta\": \"Raios, Fogos campestres e Queimadas ilegais.\",\r\n        \"alternativas\": [\r\n            \"Raios, Fogos campestres e Queimadas ilegais.\",\r\n            \"Queimadas Ilegais; Descarte incorreto de lixo na natureza; Reações fermentativas exotérmicas;\",\r\n            \"Fogos campestres; Raios Solares; Tempestades;\",\r\n            \"Bitucas de Cigarro; Queimadas Ilegais; Animais em decomposição;\",\r\n            \"Bitucas de Cigarro; Raios; Terremotos;\"\r\n        ],\r\n        \"fonte\": \"https://brasilescola.uol.com.br/geografia/incendios-florestais.htm#Principais+causas+dos+inc%C3%AAndios+florestais+\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"Marque a alternativa que possui somente causas do desmatamento na Amazônia:\",\r\n        \"resposta\": \"Rodovia Transamazônica; Pecuária extensiva; Produção Agrícola;\",\r\n        \"alternativas\": [\r\n            \"Rodovia Transamazônica; Pecuária extensiva; Produção Agrícola;\",\r\n            \"Mineração; Pecuária extensiva; Período de seca;\",\r\n            \"Rodovia Transamazônica; Produção Agrícola; Período de cheia;\",\r\n            \"Mineração; Rodovia Transamazônica; Grande Biodiversidade;\",\r\n            \"Produção Agrícola; Turismo; Mineração;\"\r\n        ],\r\n        \"fonte\": \"https://brasilescola.uol.com.br/brasil/desmatamento-da-amazonia.htm#Causas+do+desmatamento+na+Amaz%C3%B4nia\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"Marque a alternativa que possui somente causas para o aquecimento global:\",\r\n        \"resposta\": \"Poluição; Incêndios Florestais; Desmatamento;\",\r\n        \"alternativas\": [\r\n            \"Poluição; Incêndios Florestais; Desmatamento;\",\r\n            \"Piscinas; Incêndios Florestais; Desmatamento;\",\r\n            \"Poluição; Veículos à Combustão; Energia Sustentável;\",\r\n            \"Desmatamento; Produtos derivados do petróleo; Caminhadas;\",\r\n            \"Energia não renovável; Ler livros; Poluição;\"\r\n        ],\r\n        \"fonte\": \"https://brasilescola.uol.com.br/geografia/aquecimento-global.htm\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"Marque a alternativa que possui somente consequências negativas do efeito estufa:\",\r\n        \"resposta\": \"Aumento do nível do mar; Elevação das temperaturas; Secas intensas;\",\r\n        \"alternativas\": [\r\n            \"Aumento do nível do mar; Elevação das temperaturas; Secas intensas;\",\r\n            \"Aumento do nível do mar; Aumento das temperaturas; Terremotos;\",\r\n            \"Elevação das temperaturas; Terremotos; Incêndios Florestais;\",\r\n            \"Secas intensas; Inundações; Globalização;\",\r\n            \"Elevação das temperaturas; Incêndios Florestais; Maior consumo de salada;\"\r\n        ],\r\n        \"fonte\": \"https://www.portaldaindustria.com.br/industria-de-a-z/efeito-estufa/#:~:text=Globalmente%2C%20os%20maiores%20emissores%20de,res%C3%ADduos%20org%C3%A2nicos%20e%20atividades%20industriais.\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"Marque a alternativa que possui somente fontes de gases de efeito estufa:\",\r\n        \"resposta\": \"Fermentação entérica; Processos industriais; Transporte;\",\r\n        \"alternativas\": [\r\n            \"Fermentação entérica; Processos industriais; Transporte;\",\r\n            \"Desmatamento; Transporte; Ciclo da Água;\",\r\n            \"Fermentação entérica; Desmatamento; Andar à cavalo;\",\r\n            \"Transporte; Ciclo do Carbono; Comer Salada;\",\r\n            \"Fermentação entérica; Processos industriais; Tempestade;\"\r\n        ],\r\n        \"fonte\": \"https://blog.waycarbon.com/2017/02/5-fontes-de-gases-de-efeito-estufa/\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"Marque a alternativa que possui somente energias sustentáveis :\",\r\n        \"resposta\": \"Energia Ondomotriz, Energia Hidroelétrica, Energia Biomassa.\",\r\n        \"alternativas\": [\r\n            \"Energia Ondomotriz, Energia Hidroelétrica, Energia Biomassa.\",\r\n            \"Energia Ondomotriz, Energia Nuclear, Petróleo.\",\r\n            \"Carvão mineral, Energia Eólica, Energia Hidroelétrica.\",\r\n            \"Energia Solar Fotovoltaica, Energia Nuclear, Energia Maremotriz.\",\r\n            \"Energia Nuclear, Carvão mineral, Petróleo.\"\r\n        ],\r\n        \"fonte\": \"https://fia.com.br/blog/energia-sustentavel/\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"Marque a alternativa que possui somente energias sustentáveis :\",\r\n        \"resposta\": \"Energia Ondomotriz, Energia Hidroelétrica, Energia Biomassa.\",\r\n        \"alternativas\": [\r\n            \"Energia Ondomotriz, Energia Hidroelétrica, Energia Biomassa.\",\r\n            \"Energia Ondomotriz, Energia Nuclear, Petróleo.\",\r\n            \"Carvão mineral, Energia Eólica, Energia Hidroelétrica.\",\r\n            \"Energia Solar Fotovoltaica, Energia Nuclear, Energia Maremotriz.\",\r\n            \"Energia Nuclear, Carvão mineral, Petróleo.\"\r\n        ],\r\n        \"fonte\": \"https://fia.com.br/blog/energia-sustentavel/\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"Como é obtida a Energia Ondomotriz ?\",\r\n        \"resposta\": \"É gerada pelo movimento das ondas.\",\r\n        \"alternativas\": [\r\n            \"É gerada pelo movimento das ondas.\",\r\n            \" É gerada através do fluxo de água.\",\r\n            \"A partir do movimento das massas de ar (vento).\",\r\n            \"Através da captação com painéis solares.\",\r\n            \"A partir de processos como a combustão de material orgânico produzido e acumulado.\"\r\n        ],\r\n        \"fonte\": \"https://fia.com.br/blog/energia-sustentavel/\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"Como é obtida a Energia Eólica ?\",\r\n        \"resposta\": \"A partir do movimento das massas de ar (vento).\",\r\n        \"alternativas\": [\r\n            \"A partir do movimento das massas de ar (vento).\",\r\n            \"Através da captação com painéis solares.\",\r\n            \"Ela é proveniente do calor do interior do planeta.\",\r\n            \"A partir de processos como a combustão de material orgânico produzido e acumulado.\",\r\n            \"É gerada através do fluxo de água.\"\r\n        ],\r\n        \"fonte\": \"https://fia.com.br/blog/energia-sustentavel/\",\r\n        \"dificuldade\": \"Difícil\"\r\n    },\r\n    {\r\n        \"texto\": \"Como uma fonte energética precisa obter energia para ser considerada sustentável ou renovável ?\",\r\n        \"resposta\": \"Precisa obter energia através de um recurso inesgotável.\",\r\n        \"alternativas\": [\r\n            \"Precisa obter energia através de um recurso inesgotável.\",\r\n            \"Deve ser alimentada por combustíveis fósseis de forma eficiente.\",\r\n            \"Deve depender exclusivamente de fontes de energia altamente poluentes.\",\r\n            \"Pode utilizar recursos naturais apenas temporariamente.\",\r\n            \"Pode usar recursos energéticos de maneira irresponsável.\"\r\n        ],\r\n        \"fonte\": \"https://fia.com.br/blog/energia-sustentavel/\",\r\n        \"dificuldade\": \"Fácil\"\r\n    },\r\n    {\r\n        \"texto\": \"Como é obtida a Energia Solar Fotovoltaica ?\",\r\n        \"resposta\": \"Através da captação com painéis solares.\",\r\n        \"alternativas\": [\r\n            \"Através da captação com painéis solares.\",\r\n            \"Ela é proveniente do calor do interior do planeta.\",\r\n            \"É gerada por meio do movimento de marés.\",\r\n            \"É gerada pelo movimento das ondas.\",\r\n            \"A partir do movimento das massas de ar (vento).\"\r\n        ],\r\n        \"fonte\": \"https://fia.com.br/blog/energia-sustentavel/\",\r\n        \"dificuldade\": \"Fácil\"\r\n    },\r\n    {\r\n        \"texto\": \"Como é obtida a Energia Hidroelétrica ?\",\r\n        \"resposta\": \"É gerada através do fluxo de água.\",\r\n        \"alternativas\": [\r\n            \"É gerada através do fluxo de água.\",\r\n            \"Ela é proveniente do calor do interior do planeta.\",\r\n            \"É gerada por meio do movimento de marés.\",\r\n            \"É gerada pelo movimento das ondas.\",\r\n            \"A partir de processos como a combustão de material orgânico produzido e acumulado.\"\r\n        ],\r\n        \"fonte\": \"https://fia.com.br/blog/energia-sustentavel/\",\r\n        \"dificuldade\": \"Fácil\"\r\n    },\r\n    {\r\n        \"texto\": \"Como é obtida a Energia Geotérmica ?\",\r\n        \"resposta\": \"Ela é proveniente do calor do interior do planeta.\",\r\n        \"alternativas\": [\r\n            \"Ela é proveniente do calor do interior do planeta.\",\r\n            \"É gerada por meio do movimento de marés.\",\r\n            \"É gerada através do fluxo de água.\",\r\n            \"A partir do movimento das massas de ar (vento).\",\r\n            \"É gerada pelo movimento das ondas.\"\r\n        ],\r\n        \"fonte\": \"https://fia.com.br/blog/energia-sustentavel/\",\r\n        \"dificuldade\": \"Fácil\"\r\n    },\r\n    {\r\n        \"texto\": \"Como é obtida a Energia Maremotriz ?\",\r\n        \"resposta\": \"É gerada por meio do movimento de marés.\",\r\n        \"alternativas\": [\r\n            \"É gerada por meio do movimento de marés.\",\r\n            \"A partir do movimento das massas de ar (vento).\",\r\n            \"É gerada através do fluxo de água.\",\r\n            \"A partir de processos como a combustão de material orgânico produzido e acumulado.\",\r\n            \"É gerada pelo movimento das ondas.\"\r\n        ],\r\n        \"fonte\": \"https://fia.com.br/blog/energia-sustentavel/\",\r\n        \"dificuldade\": \"Fácil\"\r\n    },\r\n    {\r\n        \"texto\": \"Como é obtida a Energia Biomassa ?\",\r\n        \"resposta\": \"A partir de processos como a combustão de material orgânico produzido e acumulado.\",\r\n        \"alternativas\": [\r\n            \"A partir de processos como a combustão de material orgânico produzido e acumulado.\",\r\n            \"Ela é proveniente do calor do interior do planeta.\",\r\n            \"É gerada por meio do movimento de marés.\",\r\n            \"É gerada pelo movimento das ondas.\",\r\n            \"É gerada através do fluxo de água.\"\r\n        ],\r\n        \"fonte\": \"https://fia.com.br/blog/energia-sustentavel/\",\r\n        \"dificuldade\": \"Fácil\"\r\n    },\r\n    {\r\n        \"texto\": \"Escolha a alternativa que possui somente impactos ambientais da energia não renovável :\",\r\n        \"resposta\": \"Poluição do ar; Aquecimento global; Desmatamento.\",\r\n        \"alternativas\": [\r\n            \"Poluição do ar; Aquecimento global; Desmatamento.\",\r\n            \"Erosão do solo; Extinção de espécies; Poluição do ar.\",\r\n            \"Biodiversidade; Aquecimento global; Desmatamento.\",\r\n            \"Poluição de água; Ciclo de carbono; Chuva ácida.\",\r\n            \"Extinção dos recursos hídricos; Poluição do ar; Geração de resíduos orgânicos.\"\r\n        ],\r\n        \"fonte\": \"https://brxsolar.com/impactos-da-energia-nao-renovavel/\",\r\n        \"dificuldade\": \"Fácil\"\r\n    },\r\n    {\r\n        \"texto\": \"Escolha a alternativa que possui somente fontes de energia não renováveis :\",\r\n        \"resposta\": \"Gás Natural; Carvão Mineral; Plutônio.\",\r\n        \"alternativas\": [\r\n            \"Gás Natural; Carvão Mineral; Plutônio.\",\r\n            \"Biocombustíveis; Carvão Mineral; Urânio.\",\r\n            \"Petróleo; Biocombustíveis; Carvão Mineral.\",\r\n            \"Carvão Mineral; Marés; Urânio.\",\r\n            \"Biocombustíveis; Fluxo da Água; Petróleo.\"\r\n        ],\r\n        \"fonte\": \"https://brasilescola.uol.com.br/geografia/fontes-nao-renovaveis-energia.htm\",\r\n        \"dificuldade\": \"Fácil\"\r\n    },\r\n    {\r\n        \"texto\": \"Marque a alternativa que possui somente gases do efeito estufa:\",\r\n        \"resposta\": \"Dióxido de carbono (CO2), Metano (CH4) e Ozônio (O3).\",\r\n        \"alternativas\": [\r\n            \"Dióxido de carbono (CO2), Metano (CH4) e Ozônio (O3).\",\r\n            \"Dióxido de carbono (CO2), Metano (CH4) e Oxigênio (O2).\",\r\n            \"Hidrogênio (H2), Metano (CH4) e Oxigênio (O2).\",\r\n            \"Dióxido de carbono (CO2), Hidrogênio (H2) e Argônio (Ar).\",\r\n            \"Hélio(he), Oxigênio(O2) e Dióxido de carbono (CO2).\"\r\n        ],\r\n        \"fonte\": \"https://brasilescola.uol.com.br/quimica/gases-efeito-estufa.htm\",\r\n        \"dificuldade\": \"Fácil\"\r\n    },\r\n    {\r\n        \"texto\": \"O que é o aquecimento global ?\",\r\n        \"resposta\": \"É um fenômeno causado pela emissões de gases que intensificam o efeito estufa e que eleva a temperatura do planeta.\",\r\n        \"alternativas\": [\r\n            \"É um fenômeno causado pela emissões de gases que intensificam o efeito estufa e que eleva a temperatura do planeta.\",\r\n            \"É causado por alienígenas que aumentam a temperatura da Terra como parte de um experimento.\",\r\n            \"É resultado do excesso de refrigerantes que as pessoas consomem.\",\r\n            \"É causado pelo aumento das chamas de velas em aniversários.\",\r\n            \"É um fenômeno causado pela emissões de gases que intensificam o efeito pantufa e que abaixa a temperatura do planeta.\"\r\n        ],\r\n        \"fonte\": \"https://umsoplaneta.globo.com/clima/noticia/2021/04/04/bloco-1-o-que-e-o-aquecimento-global.ghtml\",\r\n        \"dificuldade\": \"Fácil\"\r\n    },\r\n    {\r\n        \"texto\": \"Marque a alternativa que possui somente ações que reduzem o aumento dos gases de efeito estufa:\",\r\n        \"resposta\": \"Reduzir o consumo de combustíveis fósseis; Adotar energias renováveis; Reduzir, reutilizar e reciclar resíduos;\",\r\n        \"alternativas\": [\r\n            \"Reduzir o consumo de combustíveis fósseis; Adotar energias renováveis; Reduzir, reutilizar e reciclar resíduos;\",\r\n            \"Aumentar o consumo de combustíveis fósseis; Adotar energias não renováveis; Reduzir, reutilizar e reciclar resíduos;\",\r\n            \"Plantar árvores e conservar florestas; Ler Livros; Praticar musculação;\",\r\n            \"Aumentar a eficiência energética; Apoiar políticas ambientais; Comer salada;\",\r\n            \"Reduzir, reutilizar e reciclar resíduos; Entrar em contato com a Nasa; Adotar energias renováveis;\"\r\n        ],\r\n        \"fonte\": \"https://www.portaldaindustria.com.br/industria-de-a-z/efeito-estufa/#:~:text=Globalmente%2C%20os%20maiores%20emissores%20de,res%C3%ADduos%20org%C3%A2nicos%20e%20atividades%20industriais.\",\r\n        \"dificuldade\": \"Fácil\"\r\n    },\r\n    {\r\n        \"texto\": \"Por quais estados passa o Arco de Desmatamento ?\",\r\n        \"resposta\": \"Maranhão, Pará, Mato Grosso, Rondônia e Acre.\",\r\n        \"alternativas\": [\r\n            \"Maranhão, Pará, Mato Grosso, Rondônia e Acre.\",\r\n            \"Amazonas, Pará, Mato Grosso, Rondônia e Acre.\",\r\n            \"Amazonas, Roraima, Pará e Acre.\",\r\n            \"Roraima, Pará, Mato Grosso, Rondônia e Amazonas.\",\r\n            \"Maranhão, Amazonas, Roraima, Rondônia e Acre.\"\r\n        ],\r\n        \"fonte\": \"https://acervo.socioambiental.org/sites/default/files/documents/prov0115.pdf\",\r\n        \"dificuldade\": \"Fácil\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pergunta/create?token=QraXnnqdaGICtPQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pergunta",
+						"create"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "QraXnnqdaGICtPQ"
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partida create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"texto\": \"Como uma fonte energética precisa obter energia para ser considerada sustentável ou renovável ?\",\r\n    \"resposta\": \"Precisa obter energia através de um recurso inesgotável.\",\r\n    \"alternativas\": [\r\n        \"Precisa obter energia através de um recurso inesgotável.\",\r\n        \"Deve ser alimentada por combustíveis fósseis de forma eficiente.\",\r\n        \"Deve depender exclusivamente de fontes de energia altamente poluentes.\",\r\n        \"Pode utilizar recursos naturais apenas temporariamente.\",\r\n        \"Pode usar recursos energéticos de maneira irresponsável.\"\r\n    ],\r\n    \"fonte\": \"https://fia.com.br/blog/energia-sustentavel/\",\r\n    \"dificuldade\": \"Fácil\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/partida/create?token=QraXnnqdaGICtPQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"partida",
+						"create"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "QraXnnqdaGICtPQ"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
